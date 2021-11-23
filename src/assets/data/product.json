@@ -1,0 +1,120 @@
+[{
+    "id": 1,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 400,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 2,
+    "name": "White Apple earpods",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQztkCW1pzNH4aG8MCweGbvTy43GKdT8Sa3PQ&usqp=CAU",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 200,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 3,
+    "name": "Phone",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5rrLrEw4ehk_3HahB_h6jb3NarGKQ8S1mg&usqp=CAU",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Phone"]
+},
+{
+    "id": 4,
+    "name": "Apple Charger",
+    "imgUrl": "data:image/jpeg;base64,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",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 100,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Adapters"]
+},
+{
+    "id": 5,
+    "name": "Iphone 8",
+    "imgUrl": "https://mpng.subpng.com/20190221/zza/kisspng-apple-iphone-7-plus-apple-iphone-8-plus-apple-smar-streetz-hrdat-glas-fr-iphone-8-amp-76s6-5c6ef756a2b189.0435675515507761506664.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Phone"]
+},
+{
+    "id": 6,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 7,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 8,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 9,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 10,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 11,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 12,
+    "name": "Apple earpods",
+    "imgUrl": "https://images.unsplash.com/photo-1593442607435-e4e34991b210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlJTIwYWNjZXNzb3JpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+}]

@@ -1,0 +1,48 @@
+<ul class="nav flex-column">
+    <li class="nav-item border-bottom">
+        <a class="nav-link text-black">Product
+            <i class="float-right" [ngClass]="toggleIcon ? 'fa fa-minus': 'fa fa-plus'" data-toggle="collapse" data-target="#sidebar" aria-expanded="false" (click)="clearFilters()"
+            aria-controls="sidebar"></i></a>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="sidebar">
+                    <ul>
+                        <li class="list-style-none"
+                        (click)="filterProducts('Adapters')"
+                        [value]="'Adapters'" [ngClass]="selectedFilter == 'Adapters' ? 'text-bold': ''">Adapters</li>
+                        <li class="list-style-none"
+                        (click)="filterProducts('Ear pods')"
+                        [value]="'Ear pods'" [ngClass]="selectedFilter == 'Ear pods' ? 'text-bold': ''">Ear pods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Brand</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Color</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Headphone Style</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Material</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Storage</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Printer Type</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Case Size</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Connection</a>
+    </li>
+    <li class="nav-item border-bottom">
+        <a class="nav-link disabled" href="#">Other Features</a>
+    </li>
+</ul>

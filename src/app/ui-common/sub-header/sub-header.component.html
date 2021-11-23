@@ -1,0 +1,106 @@
+<section class=" container sticky-top">
+  <section class="border-bottom">
+    <!-- <nav id="category" class="navbar container">
+        <a class="navbar-brand text-black" *ngIf="selectedProductType">{{selectedProductType.name}}</a>
+        <a class="navbar-brand text-black" data-toggle="collapse"
+          data-target="#categoriesList" aria-expanded="false" aria-controls="categoriesList">All Categories</a>
+        <div class="accordion">
+          <div id="categoriesList" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+              plugin adds the appropriate classes that we use to style each element. These classes control the
+              overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+              this with custom CSS or overriding our default variables. It's also worth noting that just about any
+              HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </nav> -->
+    <nav id="category" class="navbar container">
+      <a class="navbar-brand text-black" *ngIf="selectedProductType">{{selectedProductType.name}}</a>
+      <a class="text-black" type="button" data-toggle="collapse" data-target="#categoriesList" aria-expanded="false"
+        aria-controls="categoriesList">
+        All Categories
+      </a>
+      <div class="collapse  row col-md-12 style-none" id="categoriesList">
+       <ul class="col-md-2"></ul>
+        <ul class="col-md-2">
+          <li class="text-bold">Shop by Product</li>
+            <li>Mac</li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+        </ul>
+        <ul class="col-md-2">
+          <li class="text-bold">Shop By Category</li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+            <li>Mac</li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+        </ul>
+        <ul class="col-md-2">
+          <li> </li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+            <li>Mac</li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+        </ul>
+        <ul class="col-md-2">
+          <li> </li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+            <li>Mac</li>
+            <li>iPad</li>
+            <li>IPhone</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>All Products</li>
+        </ul>
+      </div>
+    </nav>
+
+  </section>
+  <section class="border-bottom">
+    <nav id="category" class="navbar container">
+      <a class="navbar-brand text-black">
+        <i class="fa fa-bars"></i>&nbsp;Filters</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <label for="">Sort By:</label>
+          <select id="inputState" class="d-inline border-0" (change)="sortProducts($event.target.value)">
+            <option selected> --select-- </option>
+            <option class="font-weight-bold" [value]="'price'">Price</option>
+            <option class="font-weight-bold" [value]="'userRatings'">Popularity</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</section>

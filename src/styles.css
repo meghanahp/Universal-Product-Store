@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+#top-head {
+    /* background: #002F87; */
+    background-color: navy;
+    height: 130px; 
+}
+
+#logo {
+    padding-top:14px;
+    padding-left: 20rem;
+    height:100px; 
+}
+
+.bg-light-grey {
+    background-color: lightgrey;
+}
+
+ .text-black{
+    text-decoration: none;
+    color:black;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.float-right {
+    float: right;
+}
+
+.list-style-none {
+    list-style-type: none;
+}
+
+.text-color-white {
+    color: white;
+}
+.bg-darkblue {
+    background-color: darkblue;
+}
+
+li {
+    list-style-type: none;
+}

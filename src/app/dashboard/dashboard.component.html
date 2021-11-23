@@ -1,0 +1,14 @@
+<app-header (productTypeEmitter)="onChangeProductType($event)"></app-header>
+<app-sub-header [selectedProductType]="selectedProductType"></app-sub-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-product-filters></app-product-filters>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+ <button class="btn btn-primary" (click)="scrollToTop()">Scroll to top</button>
+<app-footer></app-footer>

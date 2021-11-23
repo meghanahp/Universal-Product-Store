@@ -1,0 +1,30 @@
+<header>
+    <section id="top-head">
+      <a>
+        <img src="https://united.mediaroom.com/image/MileagePlus_.PNG" class="img-fluid img-responsive" id="logo">
+      </a>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light-grey">
+      <div class="container">
+        <a class="navbar-brand"><i class="fa fa-apple"></i> &nbsp;<b>Authorized Seller</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navSubHeader"
+          aria-controls="navSubHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="collapse navbar-collapse" id="navSubHeader">
+          <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item" *ngFor="let product of productTypes">
+              <a class="nav-link" [ngClass]="selectedProductType.id == product.id ? 'text-bold': ''"
+                (click)="onProductTypeChange($event.target.value)" [value]="product">{{product.name}}</a>
+            </li>
+            <li class="nav-item disabled">
+              <a class="nav-link"><i class="fa fa-search"></i></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link"><i class="fa fa-lock"></i></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav>
+  </header>
