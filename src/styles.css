@@ -42,3 +42,7 @@
 li {
     list-style-type: none;
 }
+
+.bg-white {
+    background-color: white;
+}

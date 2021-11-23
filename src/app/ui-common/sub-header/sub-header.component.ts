@@ -8,9 +8,6 @@ import { SharedService } from 'src/app/service/shared.service';
   styleUrls: ['./sub-header.component.css']
 })
 export class SubHeaderComponent implements OnInit {
-@Input()
-selectedProductType: ProductType;
-
   constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-<header>
+<header class="sticky-top">
     <section id="top-head">
       <a>
         <img src="https://united.mediaroom.com/image/MileagePlus_.PNG" class="img-fluid img-responsive" id="logo">
@@ -27,4 +27,74 @@
         </section>
       </div>
     </nav>
+    <section class="border-bottom bg-white">
+      <nav id="category" class="navbar container">
+        <a class="navbar-brand text-black" *ngIf="selectedProductType">{{selectedProductType.name}}</a>
+        <a class="text-black" type="button" data-toggle="collapse" data-target="#categoriesList" aria-expanded="false"
+          aria-controls="categoriesList">
+          All Categories
+        </a>
+        <div class="collapse row col-md-12 style-none" id="categoriesList">
+         <ul class="col-md-2"></ul>
+          <ul class="col-md-2">
+            <li class="text-bold">Shop by Product</li>
+              <li>Mac</li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+          </ul>
+          <ul class="col-md-2">
+            <li class="text-bold">Shop By Category</li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+              <li>Mac</li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+          </ul>
+          <ul class="col-md-2">
+            <li> </li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+              <li>Mac</li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+          </ul>
+          <ul class="col-md-2">
+            <li> </li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+              <li>Mac</li>
+              <li>iPad</li>
+              <li>IPhone</li>
+              <li>Watch</li>
+              <li>TV</li>
+              <li>Music</li>
+              <li>All Products</li>
+          </ul>
+        </div>
+      </nav>
+    </section>    
   </header>
