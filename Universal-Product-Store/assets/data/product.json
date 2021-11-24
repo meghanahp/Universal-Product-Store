@@ -1,0 +1,120 @@
+[{
+    "id": 1,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 400,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 2,
+    "name": "White Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 200,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 3,
+    "name": "Phone",
+    "imgUrl": "assets/images/phone.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typefacFdae without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Phone"]
+},
+{
+    "id": 4,
+    "name": "Apple Charger",
+    "imgUrl": "assets/images/adapter.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 100,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Adapters"]
+},
+{
+    "id": 5,
+    "name": "Iphone 8",
+    "imgUrl": "assets/images/phone.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Phone"]
+},
+{
+    "id": 6,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 7,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 8,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 9,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 10,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 11,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+},
+{
+    "id": 12,
+    "name": "Apple earpods",
+    "imgUrl": "assets/images/ear-pods.jpg",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+    "price": 500,
+    "userRating": 4,
+    "createdDateTime": "12/2/10",
+    "tags": ["Ear pods"]
+}]
