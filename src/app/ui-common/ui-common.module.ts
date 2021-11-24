@@ -7,13 +7,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductFiltersComponent } from './product-filters/product-filters.component';
 import { ViewProductDetailsComponent } from './view-product-details/view-product-details.component';
 
-
-
 @NgModule({
   declarations: [ProductCardComponent,
     HeaderComponent, SubHeaderComponent,
     FooterComponent, ProductFiltersComponent,
-    ViewProductDetailsComponent],
+    ViewProductDetailsComponent,
+    ],
   imports: [
     CommonModule
   ],
