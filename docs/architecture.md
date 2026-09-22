@@ -2,33 +2,41 @@
 Standing architecture document · last auto-updated by PR #1
 
 ## 1. Introduction & goals
-Purpose and primary quality goals.
+ 
 
 ## 2. System context
-External actors/systems table (system | relationship). Seeded once; only revise if the diff clearly adds a new external dependency — otherwise keep Existing.
+| system | relationship |
+|--------|--------------|
 
 ## 3. Building blocks
-`auto — updated by PR #1`
-Internal components: optional mermaid flowchart (Client → Controllers → Services → Stores) grounded to the diff,
-plus a table (component | responsibility).
-Marked components:
-- `AppComponent`: Updated UI title responsibility
+```mermaid
+graph LR
+    ProductDataService[Product Data Service] -->|calls| ProductService[Product Service]
+    ProductService -->|calls| ProductRepository[Product Repository]
+    ProductRepository -->|calls| Database[Database]
+    Database -->|returns| ProductRepository
+    ProductRepository -->|returns| ProductService
+    ProductService -->|returns| ProductDataService
+    ProductDataService -->|returns| ProductRepository
+    ProductRepository -->|returns| ProductService
+    ProductService -->|returns| ProductDataService
+```
+| component | responsibility |
+| --- | --- |
+| ProductDataService | handles data retrieval and caching for product service |
+| ProductService | provides data access to product repository |
+| ProductRepository | abstracts database interactions for product service |
+| Database | stores product data |
 
 ## 4. Runtime view
-`auto — updated by PR #1`
-Key request flow as prose and/or mermaid sequenceDiagram. Regenerated only the flow changed:
-```mermaid
-sequenceDiagram
-    participant Client as "Client"
-    participant App as "App"
-    participant ProductService as "Product Service"
-    Note over Client, App: Request to fetch product list
-    App->>ProductService: fetchProductList
-    ProductService->>App: product list
-    App->>Client: return product list
-```
+The request for product information is now handled by ProductDataService, which calls ProductService to retrieve product data from ProductRepository. The response from ProductRepository is then passed to ProductDataService.
 
 ## 5. Key decisions
-`auto — entry added by PR #1`
-Table: decision | rationale | source (PR #1).
-- Update UI title to "Universal Product App" to reflect application branding.
+| decision | rationale | source |
+| --- | --- | --- |
+| Using ProductDataService for data retrieval and caching | Improves performance and reduces latency | PR #1 |
+
+## 6. Risks & technical debt
+| risk | status |
+| --- | --- |
+| | |
