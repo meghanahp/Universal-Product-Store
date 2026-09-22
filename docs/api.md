@@ -4,36 +4,77 @@
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
 ## Overview
-The Universal Product Store API provides a set of endpoints for managing products, orders, and other related data.
+The Universal Product Store API provides a RESTful interface for managing products and product-related data.
 
 ## Authentication
-Callers must authenticate using the provided token scheme. Tokens have a lifetime of 15 minutes.
+The API uses JSON Web Tokens (JWT) for authentication. Tokens are valid for 30 minutes and must be refreshed after 25 minutes of inactivity. The `Authorization` header should be included in all requests with the token prefixed by `Bearer `.
 
-## Token Resource
-### METHOD `/token`
+## Product
+### METHOD `/products`
 _updated by PR #1_
-One-line description: Obtain a new token.
+
+One-line description: Retrieve a list of products.
 
 | field | type | yes/no |
 |-------|------|----------|
-| token | string | yes |
+| id    | integer | yes |
+| name  | string | no   |
+| price | number | no   |
 
-**Response 200**
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaGFuIjoiMjMwfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-}
-```
+### METHOD `/products/{id}`
+_updated by PR #1_
+
+One-line description: Retrieve a product by ID.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | integer | yes |
+| name  | string | no   |
+| price | number | no   |
+
+### METHOD `/products`
+_updated by PR #1_
+
+One-line description: Create a new product.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | integer | no  |
+| name  | string | yes |
+| price | number | yes |
+
+### METHOD `/products/{id}`
+_updated by PR #1_
+
+One-line description: Update a product.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | integer | yes |
+| name  | string | no   |
+| price | number | no   |
+
+### METHOD `/products/{id}/remove`
+_updated by PR #1_
+
+One-line description: Delete a product.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | integer | yes |
+| status | string | no   |
 
 ## Errors
-Shared error codes (400, 401, 429, …) with short meanings.
+### 400 Bad Request
+The request body is invalid or missing required fields.
 
-### Errors
-| error | description |
-|-------|-------------|
-| 401 | Unauthorized |
-| 400 | Bad Request |
+### 401 Unauthorized
+The token is invalid or missing.
+
+### 429 Too Many Requests
+The rate limit has been exceeded.
 
 ## Changelog
 ### PR #1
-• Updated `title` in `AppComponent` to use the Universal Product App name.
+* Added product endpoints and fields
+* Improved error responses
