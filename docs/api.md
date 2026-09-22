@@ -3,18 +3,17 @@
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-Base URL: `http://localhost:4200/api` · Format: JSON · Auth: Basic Auth (username="admin", password="password")
+Base URL:  · Format: JSON · Auth: 
 
 ## Overview
-This API reference provides an overview of the Universal Product Store API. The API is designed to manage products, orders, and other business logic.
+The Universal Product Store API provides a RESTful interface for managing products, orders, and other business logic.
 
 ## Authentication
-Callers can authenticate using Basic Auth with username "admin" and password "password". The token is valid for 30 minutes.
+Callers authenticate using JSON Web Tokens (JWT) with a token lifetime of 1 hour.
 
-## Products Resource
+## Products
 ### GET /products
 _updated by PR #1_
-
 Retrieve a list of all products.
 
 | field | type | yes/no |
@@ -23,73 +22,69 @@ Retrieve a list of all products.
 | name  | string | yes |
 | price | number | yes |
 
-**Response 200**
-```json
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "Product 1",
-      "price": 9.99
-    },
-    {
-      "id": 2,
-      "name": "Product 2",
-      "price": 19.99
-    }
-  ]
-}
-```
+### GET /products/{id}
+_updated by PR #1_
+Retrieve a product by its ID.
 
-**Response 401**
-```json
-{
-  "error": "Unauthorized"
-}
-```
+| field | type | yes/no |
+|-------|------|----------|
+| id    | number | yes |
+| name  | string | yes |
+| price | number | yes |
 
-## Orders Resource
+### POST /products
+_updated by PR #1_
+Create a new product.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | number | no |
+| name  | string | yes |
+| price | number | yes |
+
+## Orders
 ### GET /orders
 _updated by PR #1_
-
 Retrieve a list of all orders.
 
 | field | type | yes/no |
 |-------|------|----------|
 | id    | number | yes |
-| customerName | string | yes |
-| totalPrice | number | yes |
+| product_id | number | yes |
+| quantity | number | yes |
 
-**Response 200**
-```json
-{
-  "orders": [
-    {
-      "id": 1,
-      "customerName": "John Doe",
-      "totalPrice": 99.99
-    },
-    {
-      "id": 2,
-      "customerName": "Jane Doe",
-      "totalPrice": 199.99
-    }
-  ]
-}
-```
+### GET /orders/{id}
+_updated by PR #1_
+Retrieve an order by its ID.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | number | yes |
+| product_id | number | yes |
+| quantity | number | yes |
+
+### POST /orders
+_updated by PR #1_
+Create a new order.
+
+| field | type | yes/no |
+|-------|------|----------|
+| id    | number | no |
+| product_id | number | yes |
+| quantity | number | yes |
 
 ## Errors
 ### 400 Bad Request
-The request body is invalid or missing required fields.
+Invalid request data.
 
 ### 401 Unauthorized
-The request is not authenticated.
+Unauthorized access. Please provide a valid JWT token.
 
 ### 429 Too Many Requests
-The rate limit has been exceeded.
+Exceeded the maximum allowed requests per minute.
 
 ## Changelog
 ### PR #1
-* Added Products and Orders resources
-* Updated endpoint documentation for existing endpoints
-* Added Changelog entry for PR #1
+* Updated product title to "Universal Product App" to match the UI change
+* Added response status codes for the new endpoints
+* Removed unused field from the products endpoint
