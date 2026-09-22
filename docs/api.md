@@ -3,37 +3,37 @@
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-Base URL: 
-Format: JSON 
-Auth: 
-
 ## Overview
-The Universal Product Store API provides a RESTful interface for managing products and product-related data.
+The Universal Product Store API provides a set of endpoints for managing products, orders, and other related data.
 
 ## Authentication
-Callers can authenticate using JSON Web Tokens (JWT) with a lifetime of 15 minutes.
+Callers must authenticate using the provided token scheme. Tokens have a lifetime of 15 minutes.
 
 ## Token Resource
 ### METHOD `/token`
 _updated by PR #1_
-One-line description.
+One-line description: Obtain a new token.
+
 | field | type | yes/no |
 |-------|------|----------|
-| name  | type | yes/no |
+| token | string | yes |
 
 **Response 200**
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwibmFtZSI6IkpvaGFuIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaGFuIjoiMjMwfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 }
 ```
 
 ## Errors
-Shared error codes:
-- **401**: Unauthorized
-- **422**: Invalid request
+Shared error codes (400, 401, 429, …) with short meanings.
+
+### Errors
+| error | description |
+|-------|-------------|
+| 401 | Unauthorized |
+| 400 | Bad Request |
 
 ## Changelog
 ### PR #1
-* Updated the `title` property of the `AppComponent` to reflect the new product app name.
-Preserve older Changelog entries from the Existing file.
+• Updated `title` in `AppComponent` to use the Universal Product App name.
