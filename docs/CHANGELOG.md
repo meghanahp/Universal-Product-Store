@@ -1,13 +1,8 @@
 # Changelog
-
 ## [Unreleased]
 
-### Added
-### Changed
-### Fixed
-### Removed
-
 ### PR #1
-### _updated by PR #1_
 
----
+### Updated by PR #1
+### Added
+* `app.component.ts`: `title` property changed to `'Universal Product App'` (PR #1)
