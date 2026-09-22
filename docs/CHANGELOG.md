@@ -1,10 +1,12 @@
-```
-# Changelog
+## [Unreleased]
+### Added
+
+* Updated `title` in `app.component.ts` to `Universal Product App` _updated by PR #1_
 
 ## [Unreleased]
-### PR #1
+### Updated
+None
 
-- Updated `app.component.ts` by PR #1: `title = 'Universal Product App'`
-```
-
-No changes were made to the code outside of the diff.
+## [Unreleased]
+### Removed
+None
