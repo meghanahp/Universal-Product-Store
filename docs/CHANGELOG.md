@@ -1,20 +1,17 @@
 # Changelog
 ## [Unreleased]
-
 ### PR #1
-
-### API
-
-No API changes.
-
-### Architecture
-
-* `auto-section 1`: Added `title` property for the `AppComponent` to reflect the updated app title.
-* `auto-section 2`: Updated the `styleUrls` property to point to the new app component CSS file.
-* `auto-section 3`: Renamed the `title` property from `Universal Product Store` to `Universal Product App` to match the new app title.
-* `auto-section 4`: Updated the `title` property of the `AppComponent` to be used as the app title.
-* `auto-section 5`: Added a note to indicate that the app title has been updated to reflect the new app name.
-
+### Added
+### Changed
+### Fixed
+### Removed
+### Auto
+#### Updated auto section: [auto1](auto1 updated _by PR #1_)
+#### Updated auto section: [auto2](auto2 updated _by PR #1_)
+#### Updated auto section: [auto3](auto3 updated _by PR #1_)
+#### Updated auto section: [auto4](auto4 updated _by PR #1_)
+#### Updated auto section: [auto5](auto5 updated _by PR #1_)
 ### Manual
+#### [Architecture](architecture)
 
-* Added note to indicate that the app title has been updated to reflect the new app name.
+---
