@@ -1,60 +1,27 @@
+```markdown
 # UniversalProductStore — API reference
+### _Updated by PR #1_
 
-### Updated by PR #1
+## Endpoints
 
-### Endpoints
+### GET /products
+Returns a list of all products
 
-#### Get Product List
+### GET /products/:id
+Returns a product by ID
 
-*   `GET /api/product-list`
-*   Returns a list of products
+### POST /products
+Creates a new product
 
-#### Get Product Details
+### PUT /products/:id
+Updates a product
 
-*   `GET /api/product/{id}`
-*   Returns product details by ID
+### DELETE /products/:id
+Deletes a product
 
-#### Get Product By Code
-
-*   `GET /api/product/{code}`
-*   Returns product details by code
-
-#### Update Product
-
-*   `PATCH /api/product/{id}`
-*   Updates product details
-
-#### Delete Product
-
-*   `DELETE /api/product/{id}`
-*   Deletes product
-
-### Changelog ### PR #1
-
+## Changelog
 ### PR #1
 
-### Added Endpoints
-
-#### Get Product List
-
-*   `GET /api/product-list`
-
-#### Get Product By Code
-
-*   `GET /api/product/{code}`
-
-### Removed Endpoints
-
-#### Get Product Details
-
-*   `GET /api/product/{id}`
-
-### Updated Endpoints
-
-#### Update Product
-
-*   `PATCH /api/product/{id}`
-
-#### Delete Product
-
-*   `DELETE /api/product/{id}`
+- Updated `ProductService` to use `AppComponent` instance
+- Added support for product IDs in URLs
+```
