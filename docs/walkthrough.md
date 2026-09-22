@@ -1,103 +1,54 @@
-# Universal Product Store — Walkthrough
+Walkthrough
+================
 
-## Introduction
-Get started with the Universal Product Store by following this walkthrough.
+Table of Contents
+-----------------
 
-## Prerequisites
-Ensure you have a basic understanding of the Universal Product Store and its components.
+*   [Architecture](#architecture)
+*   [Changelog](#changelog)
+*   [Features/Walkthrough/Readme](#featureswalkthroughreadme)
 
-## Step 1: Setting up the Universal Product Store
-Run the following command to set up the Universal Product Store:
-```bash
-npm install
-```
-Update the `AppComponent` to use the `ProductService`:
-```diff
---- a/src/app/app.component.ts
-+++ b/src/app/app.component.ts
-@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
-   styleUrls: ['./app.component.css']
- })
--export class AppComponent {
-+export class AppComponent {
-   title = 'Updated by PR #1_';
- }
-```
-## Step 1: _updated by PR #1_
-### Updated Endpoint
-#### Updated by PR #1
-`GET /products`
+Architecture
+------------
 
-#### Updated by PR #1
-`POST /products`
+### Universal Product Store — Architecture
 
-### Step 2: Using the ProductService
-Import and use the `ProductService` in your components:
-```diff
---- a/src/app/app.component.ts
-+++ b/src/app/app.component.ts
-@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
-   styleUrls: ['./app.component.css']
- })
- export class AppComponent {
-   title = 'Updated by PR #1_';
- }
-```
-## Step 2: Using the ProductService
-#### Updated by PR #1
-`getProducts()`
+| **Responsibility** | Description |
+| --- | --- |
+| **AppComponent**: | Implements a component with a title, referencing `ProductService`. |
+| **ProductService**: | Provides a product service for retrieving products. |
 
-#### Updated by PR #1
-`createProduct(productData)`
+Changelog
+----------
 
-## Step 3: Integrating with the Universal Product Store
-Integrate the `AppComponent` with the Universal Product Store:
-```diff
---- a/src/app/app.component.ts
-+++ b/src/app/app.component.ts
-@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
-   styleUrls: ['./app.component.css']
- })
- export class AppComponent {
-   title = 'Updated by PR #1_';
- }
-```
-## Step 3: Integrating with the Universal Product Store
-#### Updated by PR #1
-`updateProduct(productId, productData)`
-
-#### Updated by PR #1
-`deleteProduct(productId)`
-
-## Step 4: Testing the Universal Product Store
-Test the Universal Product Store by running the following command:
-```bash
-npm test
-```
-## Step 4: Testing the Universal Product Store
-#### Updated by PR #1
-`testGetProducts()`
-
-#### Updated by PR #1
-`testCreateProduct()`
-
-#### Updated by PR #1
-`testUpdateProduct()`
-
-#### Updated by PR #1
-`testDeleteProduct()`
-
-### Step 4: Updated Changelog
 ### PR #1
-- Updated `AppComponent` to use `ProductService`
-- Updated `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
-- Added test cases for `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
 
-## Step 5: Conclusion
-Congratulations! You have completed the Universal Product Store walkthrough.
+#### Updated Endpoints
 
-### Step 5: Updated Changelog
-### PR #1
-- Updated `AppComponent` to use `ProductService`
-- Updated `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
-- Added test cases for `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
+### Product Service API
+
+#### Updated by PR #1
+
+*   `GET /products`: Retrieves a list of products from the server.
+
+Features/Walkthrough/Readme
+---------------------------
+
+### Universal Product Store Walkthrough
+
+#### Updated by PR #1
+
+*   [Component](#component)
+    *   The `AppComponent` serves as the main component of the Universal Product Store.
+    *   It uses the `ProductService` to interact with the product service.
+
+### Updated by PR #1
+
+#### Updated by PR #1
+
+*   `ProductService` is used to fetch products from the server.
+
+#### Updated by PR #1
+
+*   The `AppComponent` updates the title to use the `ProductService`.
+    *   `title = 'Universal Product App';`
