@@ -1,54 +1,105 @@
-Walkthrough
-================
+# Universal Product Store — Walkthrough
 
-Table of Contents
------------------
+## Table of Contents
+*   [Prerequisites](#prerequisites)
+*   [Step 1: Setting up the App](#step-1-setting-up-the-app)
+*   [Step 2: Fetching Product Data](#step-2-fetching-product-data)
+*   [Step 3: Displaying Product Information](#step-3-displaying-product-information)
+*   [Step 4: Updating Product Data](#step-4-updating-product-data)
 
-*   [Architecture](#architecture)
-*   [Changelog](#changelog)
-*   [Features/Walkthrough/Readme](#featureswalkthroughreadme)
+## Prerequisites
+To complete this walkthrough, ensure you have the following:
 
-Architecture
-------------
+*   Node.js installed on your machine
+*   The project directory cloned from the repository
 
-### Universal Product Store — Architecture
+## Step 1: Setting up the App
+1.  Open your terminal and navigate to the project directory.
+2.  Run the following command to initialize the project:
 
-| **Responsibility** | Description |
-| --- | --- |
-| **AppComponent**: | Implements a component with a title, referencing `ProductService`. |
-| **ProductService**: | Provides a product service for retrieving products. |
+    ```bash
+npm init
+```
+3.  Install the required dependencies:
 
-Changelog
-----------
+    ```bash
+npm install
+```
+4.  Start the application:
 
+    ```bash
+npm start
+```
+
+## Step 2: Fetching Product Data
+1.  Open the `AppComponent` file and verify that the `ProductService` is injected.
+
+    ```typescript
+import { ProductService } from './service/product.service';
+```
+2.  Run the following command to fetch product data:
+
+    ```bash
+npm run fetch-data
+```
+
+## Step 3: Displaying Product Information
+1.  Open the `AppComponent` file and update the `title` property to reflect the product name.
+
+    ```typescript
+title = 'Updated Universal Product App';
+```
+2.  Run the following command to display product information:
+
+    ```bash
+npm run display-product
+```
+
+## Step 4: Updating Product Data
+1.  Open the `ProductService` file and update the `updateProduct` method.
+
+    ```typescript
+updateProduct(id: number, data: any) {
+  // Update product data here
+}
+```
+2.  Run the following command to update product data:
+
+    ```bash
+npm run update-product
+```
+
+### Changelog
 ### PR #1
 
-#### Updated Endpoints
-
-### Product Service API
-
-#### Updated by PR #1
-
-*   `GET /products`: Retrieves a list of products from the server.
-
-Features/Walkthrough/Readme
----------------------------
-
-### Universal Product Store Walkthrough
-
-#### Updated by PR #1
-
-*   [Component](#component)
-    *   The `AppComponent` serves as the main component of the Universal Product Store.
-    *   It uses the `ProductService` to interact with the product service.
+*   Updated `AppComponent` to display product information
+*   Updated `ProductService` to handle product data updates
 
 ### Updated by PR #1
 
-#### Updated by PR #1
+### Updated by PR #1
 
-*   `ProductService` is used to fetch products from the server.
+---
 
-#### Updated by PR #1
+#### auto Section 1: 
+| Component | Responsibility |
+| --- | --- |
+| AppComponent | Displays product information |
+| ProductService | Fetches product data |
 
-*   The `AppComponent` updates the title to use the `ProductService`.
-    *   `title = 'Universal Product App';`
+#### auto Section 2: 
+| Component | Responsibility |
+| --- | --- |
+| ProductService | Updates product data |
+
+#### auto Section 3: 
+| Component | Responsibility |
+| --- | --- |
+| update-product | Updates product data |
+
+#### auto Section 4: 
+| Component | Responsibility |
+| --- | --- |
+| npm run fetch-data | Fetches product data |
+| npm run display-product | Displays product information |
+| npm run update-product | Updates product data |
