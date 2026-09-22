@@ -1,32 +1,46 @@
-```markdown
-Universal Product Store — Walkthrough
+# Universal Product Store — Walkthrough
 
-# Step 1: Merging Changes
-Merging the changes from the pull request #1 into the walkthrough.
+Walkthrough for Universal Product Store
 
-### Updated Endpoints
-- `app.component.ts`: `title = 'Universal Product App';` _updated by PR #1_
+## Step 1: Update Component Title
+
+*   Update `title` property in `app.component.ts` from `'Universal Product Store'` to `'Universal Product App'`.
+
+### Updated Code
+```typescript
+export class AppComponent {
+  title = 'Universal Product App';
+}
+```
+
+### _Updated by PR #1_
 
 ### Changelog ### PR #1
 
-### Step 2: Applying Merge
-Applying the merge to the walkthrough.
+## Step 2: Update Product Service Import
 
-### Step 3: Reviewing Changes
-Reviewing the changes to ensure all sections are up-to-date.
+*   Update `ProductService` import from `./service/product.service` to its original name, assuming it was changed in the PR.
 
-### Step 4: Finalizing
-Finalizing the walkthrough after reviewing all changes.
-
-### Step 5: Updating Documentation
-Updating the documentation to reflect the changes.
-
-### Step 6: Committing Changes
-Committing the changes to the walkthrough.
-
-### Step 7: Pushing Changes
-Pushing the changes to the repository.
-
-### Step 8: Verifying Changes
-Verifying the changes to ensure everything is correct.
+### Updated Code
+```typescript
+import { ProductService } from './service/product.service';
 ```
+
+### Note: Manual section copy-paste as the original import was not touched.
+
+## Step 3: Update Component CSS
+
+*   Update `app.component.css` to include any necessary styles for the updated component title.
+
+### Updated Code
+```css
+.app-component {
+  /* Updated styles for the new title */
+  font-size: 24px;
+  font-weight: bold;
+}
+```
+
+### Note: Manual section copy-paste as the original CSS was not touched.
+
+### Changelog ### PR #1
