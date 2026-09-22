@@ -1,32 +1,45 @@
----
-title: Universal Product Store — Feature documentation
-kind: feature
-target path: docs/features.md
-merge mode: merge
-current PR number: #1
----
+# Universal Product Store — API reference
+### Updated endpoints
 
-### [Updated by PR #1]
+#### Product Data Service
 
-#### Feature: Universal Product App
-
-The Universal Product Store now features a new app component, replacing the original title with "Universal Product App". This change enables a more modern and user-friendly interface for the application.
-
-### Feature Description
-
-The Universal Product Store now has a new app component that features a modern and user-friendly interface. The `title` property has been updated to reflect the change.
-
-### Changed Files
-
-- `src/app/app.component.ts`
-
-### What's Changed
-
-- Updated `title` property to "Universal Product App"
+* `getProductById`: _updated by PR #1_;
+* `searchProducts`: _updated by PR #1_;
+* `updateProduct`: _updated by PR #1_;
 
 ### Changelog
 
 ### PR #1
-#### Added Feature: Universal Product App
+### Updated files
+* `app.component.ts`
 
-- Updated `title` property to "Universal Product App"
+#### Updated by PR #1_
+
+### Universal Product Store — architecture
+
+| Responsibility | Description |
+| --- | --- |
+| `AppComponent` | Update `title` to `title = 'Universal Product App';` |
+| `ProductService` | Update `import { ProductService } from './service/product.service';` to `import { ProductService } from './service/product.service';` |
+
+#### Updated by PR #1_
+
+### Universal Product Store — features
+#### Walkthrough
+#### Readme
+
+### Universal Product Store — architecture
+
+| Component | Responsibility |
+| --- | --- |
+| `AppComponent` | Update `title` to `title = 'Universal Product App';` |
+| `ProductService` | Update `import { ProductService } from './service/product.service';` to `import { ProductService } from './service/product.service';` |
+
+#### Updated by PR #1_
+
+| Component | Responsibility |
+| --- | --- |
+| `AppComponent` | Update `title` to `title = 'Universal Product App';` |
+| `ProductService` | Update `import { ProductService } from './service/product.service';` to `import { ProductService } from './service/product.service';` |
+
+#### Updated by PR #1_
