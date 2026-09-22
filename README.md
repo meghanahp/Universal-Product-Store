@@ -1,5 +1,5 @@
----
-# UniversalProductStore
+```markdown
+# UniversalProductApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
@@ -27,9 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
----
 ### Changelog
 
-### PR #1
+#### PR #1
 
-* Updated `AppComponent` title to `Universal Product App`
+* Update `title` in `AppComponent` to `Universal Product App`
+```
+
+Note: The Changelog entry only includes the API changes visible in the diff, which is the change to the `title` property in `AppComponent`. The `update` keyword marks the endpoint as being updated by PR #1.
