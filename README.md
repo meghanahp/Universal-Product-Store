@@ -1,34 +1,33 @@
-# UniversalProductStore — architecture
+---
+# UniversalProductStore — Architecture
 
-## Overview
-### Auto section
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
-### Manual section
+## Auto-generated Sections
 
-## Code scaffolding
-### Auto section
+### Built with Angular CLI
 
-### Manual section
+### Development Tools
 
-## Build
-### Auto section
+### Build Process
 
-### Manual section
+### Unit Testing
 
-## Running unit tests
-### Auto section
+### End-to-End Testing
 
-### Manual section
+### Configuration
 
-## Running end-to-end tests
-### Auto section
+### Changelog ### PR #1;
 
-### Manual section
+---
+# UniversalProductStore — API reference
 
-## Further help
-### Auto section
+### Updated Endpoints
 
-### Changelog ### PR #1
+### Changelog ### PR #1;
 
-### PR #1 _updated by PR #1_
-* Updated the title of the app from "Universal Product Store" to "Universal Product App"
+---
+
+### Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
