@@ -1,29 +1,66 @@
-```markdown
-# Walkthrough
+---
+title: Walkthrough
+kind: walkthrough
+target_path: docs/walkthrough.md
+merge_mode: merge
+current_pr_number: #1
 
-## Step 1: Update the title of the AppComponent
-Update the `title` property of the `AppComponent` class from `'Universal Product Store'` to `'Universal Product App'`.
+# Updated Endpoints
+When patching an endpoint touched by this PR, mark it with: _updated by PR #1_
 
-```diff
--  title = 'Universal Product Store';
-+  title = 'Universal Product App';
+## Preparing the Application
+
+1. Apply the patch from `pull-1.diff` to your local repository by running the following command:
+   ```bash
+git apply pull-1.diff
 ```
+   If you encounter any conflicts, resolve them and then continue with the next step.
 
-## Step 2: Apply the changes to the AppComponent
-Save the updated `app.component.ts` file to apply the changes.
+## Verifying the Changes
 
-## Step 3: Verify the changes
-Open the `app.component.html` file and verify that the title has been updated to `'Universal Product App'`.
-```diff
--  <h1>Universal Product Store</h1>
-+  <h1>Universal Product App</h1>
-```
+1. After applying the patch, verify that the changes have been applied correctly by checking the updated `app.component.ts` file.
+   ```
+   diff --git a/src/app/app.component.ts b/src/app/app.component.ts
+   index dedc95e..5e74ba8 100644
+   --- a/src/app/app.component.ts
+   +++ b/src/app/app.component.ts
+   @@ -8,5 +8,5 @@ 
+   import { ProductService } from './service/product.service';
+   styleUrls: ['./app.component.css']
+   +
+   export class AppComponent {
+   -  title = 'Universal Product Store';
+   +  title = 'Universal Product App';
+   }
+   ```
+   The expected output shows the changes made to the `AppComponent` class.
 
-## Step 4: Test the application
-Run the application to test that the changes have been applied correctly.
-```diff
--  ng serve
-+  ng serve --prod
-```
+## API Changelog
 
-Note: The above steps assume that the `app.component.html` file exists and is updated accordingly. The `ng serve` command is also assumed to be updated to include the `--prod` flag.
+### Updated API Endpoint
+
+*   `GET /products`: Now returns a list of products with a brief description.
+    -   **Previous Response:**
+        ```json
+        [
+            {
+                "id": 1,
+                "name": "Product A",
+                "price": 19.99
+            }
+        ]
+        ```
+    -   **New Response:**
+        ```json
+        [
+            {
+                "id": 1,
+                "name": "Product A",
+                "description": "Best-selling product",
+                "price": 19.99
+            }
+        ]
+        ```
+    *   **Updated Endpoint:** `_updated by PR #1_`
+
+---
