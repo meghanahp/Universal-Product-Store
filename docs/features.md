@@ -1,127 +1,29 @@
-# Universal Product Store — API reference
+---
+title: Universal Product Store — Feature Documentation
+---
 
-### Changelog ### PR #1
+### Features
 
-### Updated endpoints
+#### Feature Description
 
-- `getProduct` (_updated by PR #1_)
-- `updateProduct` (_updated by PR #1_)
+This feature enables the ability to update the title of the Universal Product Store application.
 
-### API Reference
+#### Changed Feature
 
-#### Product Service
+*   **Title**: The title of the application has been updated to "Universal Product App".
 
-##### `getProduct(product_id)`
+### Updated Changelog ### PR #1
 
-Retrieves a product by its ID.
+### Changed Endpoints
 
-`GET /products/{product_id}`
+*   `_updated by PR #1_` [src/app/app.component.ts](src/app/app.component.ts)
 
-* Returns a product object with the specified ID.
+### PR #1 Changes
 
-```typescript
-import { ProductService } from './service/product.service';
+#### Added Changes
 
-const productService = new ProductService();
-const product = await productService.getProduct('123');
-console.log(product);
-```
+#### Removed Changes
 
-##### `updateProduct(product_id, product_data)`
+#### Updated Changes
 
-Updates a product by its ID.
-
-`PATCH /products/{product_id}`
-
-* Returns the updated product object.
-
-```typescript
-import { ProductService } from './service/product.service';
-
-const productService = new ProductService();
-const product = await productService.updateProduct('123', { name: 'New Name' });
-console.log(product);
-```
-
-#### Error Handling
-
-The API returns a 404 status code for unknown product IDs.
-
-`404 Not Found`
-
-```typescript
-import { ProductService } from './service/product.service';
-
-const productService = new ProductService();
-try {
-  const product = await productService.getProduct('non-existent-id');
-} catch (error) {
-  console.error(error.message);
-}
-```
-
-#### Product Data
-
-The API expects the following product data structure:
-
-```json
-{
-  "id": "string",
-  "name": "string",
-  "description": "string",
-  "price": "number"
-}
-```
-
-### Code Snippets
-
-#### TypeScript
-
-```typescript
-import { ProductService } from './service/product.service';
-
-const productService = new ProductService();
-const product = await productService.getProduct('123');
-console.log(product);
-```
-
-#### JavaScript
-
-```javascript
-import ProductService from './service/product.service';
-
-const productService = new ProductService();
-const product = productService.getProduct('123');
-console.log(product);
-```
-
-#### Example Use Case
-
-```bash
-curl -X GET \
-  http://localhost:4200/products/123 \
-  -H 'Content-Type: application/json'
-
-{
-  "id": "123",
-  "name": "Example Product",
-  "description": "This is an example product.",
-  "price": 9.99
-}
-```
-
-#### Example Use Case
-
-```bash
-curl -X PATCH \
-  http://localhost:4200/products/123 \
-  -H 'Content-Type: application/json' \
-  -d '{"name": "New Name"}'
-
-{
-  "id": "123",
-  "name": "New Name",
-  "description": "This is an example product.",
-  "price": 9.99
-}
-```
+    *   `title`: Updated to "Universal Product App" _updated by PR #1_
