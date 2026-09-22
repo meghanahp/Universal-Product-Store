@@ -1,48 +1,43 @@
 # Universal Product Store — architecture
 
 ## 1. Introduction & goals
- 
+
+No introduction yet.
 
 ## 2. System context
 
 | system | relationship |
 |--------|--------------|
-| existing | existing |
-| new     | new |
+| ProductService | used by |
+| ProductStore | used by |
 
 ## 3. Building blocks
 ```mermaid
 flowchart LR
-    Service A -->|service| ProductStore
-    ProductStore -->|product| ProductService
-    ProductStore -->|api| ProductApiClient
-    ProductApiClient -->|http| ProductApiEndpoint
+    ProductStore["ProductStore"] -->|request| ProductService["ProductService"]
+    ProductService["ProductService"] -->|response| ProductStore["ProductStore"]
+    classProductStore["class ProductStore"] "Repository" asserviceA["as serviceA"]
+    classProductService["class ProductService"] "Service" asserviceB["as serviceB"]
+    ProductStore["Repository"] -->|update| ProductService["Service"]
+    ProductService["Service"] -->|call| ProductStore["Repository"]
 ```
 
+
 | component | responsibility |
-|------------|----------------|
-| ProductStore | responsible for product service integration |
-| ProductService | provides product data |
-| ProductApiClient | handles product API requests |
-| ProductApiEndpoint | exposes product API endpoints |
+|-----------|-----------------|
+| ProductService | handles product data |
+| ProductStore | manages product data |
 
 ## 4. Runtime view
 
-The request for the product is handled by the `ProductApiClient`, which makes a request to the `ProductApiEndpoint`. The `ProductStore` is responsible for integrating with the `ProductService` to retrieve product data.
+The `ProductService` is now responsible for updating the `ProductStore` repository.
 
 ```mermaid
 sequenceDiagram
-    participant ProductStore as "Product Store"
-    participant ProductService as "Product Service"
-    participant ProductApiClient as "Product Client API"
-    participant ProductApiEndpoint as "Product API Endpoint"
-    
-    ProductStore->>ProductService: request product data
-    ProductService->>ProductApiClient: product data
-    ProductApiClient->>ProductApiEndpoint: request to product API endpoint
-    ProductApiEndpoint->>ProductApiClient: product API response
-    ProductApiClient->>ProductStore: response to product store
-    ProductStore->>ProductService: handle product data
+    participant ProductService as Service
+    participant ProductStore as Repository
+    ProductService->>ProductStore: request for product data
+    ProductStore->>ProductService: response with updated product data
 ```
 
 
@@ -50,6 +45,10 @@ sequenceDiagram
 
 | decision | rationale | source |
 |----------|-----------|--------|
-| new API endpoint | added to handle product API requests | PR #1 |
+| Update ProductService to handle product data | Simplify data flow | pull-1.diff |
 
 ## 6. Risks & technical debt
+
+| risk | status |
+|------|-------|
+|  |  |
