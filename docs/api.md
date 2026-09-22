@@ -3,88 +3,37 @@
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-Base URL:  · Format: JSON · Auth: 
+Base URL: 
+Format: JSON 
+Auth: 
 
 ## Overview
-The Universal Product Store API provides a RESTful interface for managing products, orders, and other business logic.
+The Universal Product Store API provides a RESTful interface for managing products and product-related data.
 
 ## Authentication
-Callers authenticate using JSON Web Tokens (JWT) with a token lifetime of 1 hour.
+Callers can authenticate using JSON Web Tokens (JWT) with a lifetime of 15 minutes.
 
-## Products
-### GET /products
+## Token Resource
+### METHOD `/token`
 _updated by PR #1_
-Retrieve a list of all products.
-
+One-line description.
 | field | type | yes/no |
 |-------|------|----------|
-| id    | number | yes |
-| name  | string | yes |
-| price | number | yes |
+| name  | type | yes/no |
 
-### GET /products/{id}
-_updated by PR #1_
-Retrieve a product by its ID.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | number | yes |
-| name  | string | yes |
-| price | number | yes |
-
-### POST /products
-_updated by PR #1_
-Create a new product.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | number | no |
-| name  | string | yes |
-| price | number | yes |
-
-## Orders
-### GET /orders
-_updated by PR #1_
-Retrieve a list of all orders.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | number | yes |
-| product_id | number | yes |
-| quantity | number | yes |
-
-### GET /orders/{id}
-_updated by PR #1_
-Retrieve an order by its ID.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | number | yes |
-| product_id | number | yes |
-| quantity | number | yes |
-
-### POST /orders
-_updated by PR #1_
-Create a new order.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | number | no |
-| product_id | number | yes |
-| quantity | number | yes |
+**Response 200**
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwibmFtZSI6IkpvaGFuIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
 
 ## Errors
-### 400 Bad Request
-Invalid request data.
-
-### 401 Unauthorized
-Unauthorized access. Please provide a valid JWT token.
-
-### 429 Too Many Requests
-Exceeded the maximum allowed requests per minute.
+Shared error codes:
+- **401**: Unauthorized
+- **422**: Invalid request
 
 ## Changelog
 ### PR #1
-* Updated product title to "Universal Product App" to match the UI change
-* Added response status codes for the new endpoints
-* Removed unused field from the products endpoint
+* Updated the `title` property of the `AppComponent` to reflect the new product app name.
+Preserve older Changelog entries from the Existing file.
