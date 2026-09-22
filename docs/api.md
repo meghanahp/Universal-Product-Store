@@ -1,120 +1,95 @@
-# Universal Product App — API reference
+# Universal Product Store — API reference
 > continuum · standard documentation format — api reference
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-Base URL: 
-Format: JSON 
-Auth: 
+Base URL: `http://localhost:4200/api` · Format: JSON · Auth: Basic Auth (username="admin", password="password")
 
 ## Overview
-Short description of the API surface.
+This API reference provides an overview of the Universal Product Store API. The API is designed to manage products, orders, and other business logic.
 
 ## Authentication
-How callers authenticate (headers, token lifetime).
+Callers can authenticate using Basic Auth with username "admin" and password "password". The token is valid for 30 minutes.
 
-## Product Resource
-Group related endpoints under a resource heading (e.g. Product resource).
-
-### GET /
+## Products Resource
+### GET /products
 _updated by PR #1_
-Get all products.
+
+Retrieve a list of all products.
 
 | field | type | yes/no |
 |-------|------|----------|
-| name  | type | yes/no |
+| id    | number | yes |
+| name  | string | yes |
+| price | number | yes |
 
 **Response 200**
 ```json
 {
-  "data": [
+  "products": [
     {
       "id": 1,
-      "name": "Product 1"
+      "name": "Product 1",
+      "price": 9.99
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 19.99
     }
   ]
 }
 ```
 
-### GET /:id
+**Response 401**
+```json
+{
+  "error": "Unauthorized"
+}
+```
+
+## Orders Resource
+### GET /orders
 _updated by PR #1_
-Get a product by ID.
+
+Retrieve a list of all orders.
 
 | field | type | yes/no |
 |-------|------|----------|
-| id    | number | yes     |
-| name  | string | yes     |
+| id    | number | yes |
+| customerName | string | yes |
+| totalPrice | number | yes |
 
 **Response 200**
 ```json
 {
-  "data": {
-    "id": 1,
-    "name": "Product 1"
-  }
+  "orders": [
+    {
+      "id": 1,
+      "customerName": "John Doe",
+      "totalPrice": 99.99
+    },
+    {
+      "id": 2,
+      "customerName": "Jane Doe",
+      "totalPrice": 199.99
+    }
+  ]
 }
 ```
-
-### POST /
-_updated by PR #1_
-Create a new product.
-
-| field | type | required |
-|-------|------|----------|
-| name  | string | yes     |
-| price | number | no       |
-
-**Response 201**
-```json
-{
-  "data": {
-    "id": 1,
-    "name": "Product 1"
-  }
-}
-```
-
-### PUT /:id
-_updated by PR #1_
-Update a product by ID.
-
-| field | type | required |
-|-------|------|----------|
-| id    | number | yes     |
-| name  | string | yes     |
-| price | number | no       |
-
-**Response 200**
-```json
-{
-  "data": {
-    "id": 1,
-    "name": "Product 1"
-  }
-}
-```
-
-### DELETE /:id
-_updated by PR #1_
-Delete a product by ID.
-
-**Response 204**
 
 ## Errors
-Shared error codes (400, 401, 429, …) with short meanings.
-
 ### 400 Bad Request
-Invalid request data.
+The request body is invalid or missing required fields.
 
 ### 401 Unauthorized
-Caller is not authenticated.
+The request is not authenticated.
 
 ### 429 Too Many Requests
-Caller has exceeded the rate limit.
+The rate limit has been exceeded.
 
 ## Changelog
-Newest first. Each entry:
 ### PR #1
-* Renamed the app component's title from "Universal Product Store" to "Universal Product App" to better reflect the app's purpose.
-* Updated the product resource to include a new endpoint for creating products.
-* Fixed a typo in the product resource's response schema.
+* Added Products and Orders resources
+* Updated endpoint documentation for existing endpoints
+* Added Changelog entry for PR #1
