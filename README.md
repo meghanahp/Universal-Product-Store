@@ -1,27 +1,60 @@
-# UniversalProductStore
+# UniversalProductStore — API reference
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+### Updated by PR #1
 
-## Development server
+### Endpoints
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Get Product List
 
-## Code scaffolding
+*   `GET /api/product-list`
+*   Returns a list of products
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Get Product Details
 
-## Build
+*   `GET /api/product/{id}`
+*   Returns product details by ID
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Get Product By Code
 
-## Running unit tests
+*   `GET /api/product/{code}`
+*   Returns product details by code
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Update Product
 
-## Running end-to-end tests
+*   `PATCH /api/product/{id}`
+*   Updates product details
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Delete Product
 
-## Further help
+*   `DELETE /api/product/{id}`
+*   Deletes product
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Changelog ### PR #1
+
+### PR #1
+
+### Added Endpoints
+
+#### Get Product List
+
+*   `GET /api/product-list`
+
+#### Get Product By Code
+
+*   `GET /api/product/{code}`
+
+### Removed Endpoints
+
+#### Get Product Details
+
+*   `GET /api/product/{id}`
+
+### Updated Endpoints
+
+#### Update Product
+
+*   `PATCH /api/product/{id}`
+
+#### Delete Product
+
+*   `DELETE /api/product/{id}`
