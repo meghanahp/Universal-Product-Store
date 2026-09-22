@@ -1,33 +1,23 @@
----
-# UniversalProductStore — Architecture
+# UniversalProductStore — README
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+# Overview
+UniversalProductStore is a product store generated with Angular CLI.
 
-## Auto-generated Sections
+## Setup/Usage
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Built with Angular CLI
+## Configuration
+No configuration is required for this project.
 
-### Development Tools
+## Build
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-### Build Process
+### Changelog
+### PR #1
 
-### Unit Testing
+### Updated by PR #1
 
-### End-to-End Testing
+- Updated the app title to 'Universal Product App' in `app.component.ts`
 
-### Configuration
-
-### Changelog ### PR #1;
-
----
-# UniversalProductStore — API reference
-
-### Updated Endpoints
-
-### Changelog ### PR #1;
-
----
-
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contributing
+See [CONTRIBUTING.md](https://github.com/UniversalProductStore/universal-product-store/blob/main/CONTRIBUTING.md) for more information on how to contribute to this project.
