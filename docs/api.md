@@ -1,88 +1,45 @@
 # API Documentation
-## id: api
+> continuum · standard documentation format — api reference
+>
+> Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-### Overview
-This is the Universal Product App API documentation.
+Base URL: https://example.com/api · Format: JSON · Auth: Bearer
 
-### Endpoints
+## Overview
+The Universal Product App API provides a RESTful interface for managing products and product-related data.
 
-#### GET /
+## Authentication
+ callers must provide a valid Bearer token in the Authorization header. Token lifetime is not explicitly stated but is expected to be short-lived.
 
-### Product Service
+## Product Resource
+### GET /products
+_updated by PR #1_
+Retrieve a list of all products.
 
-#### Get Product Information
+| field | type | yes/no |
+|-------|------|----------|
+| id    | integer | yes |
+| name  | string | yes |
+| price | number | no |
 
-*   **Endpoint:** `/api/products/:id`
-*   **Method:** `GET`
-*   **Description:** Retrieves product information by ID.
-*   **Request Body:** None
-*   **Response:**
-    *   **200 OK:** `product` object with product details
-    *   **404 NOT FOUND:** Error message indicating product not found
+**Response 200**
+```json
+{
+  "products": [
+    {"id": 1, "name": "Product 1", "price": 10.99},
+    {"id": 2, "name": "Product 2", "price": 5.99}
+  ]
+}
+```
 
-#### Get Product List
+## Errors
+Shared error codes:
 
-*   **Endpoint:** `/api/products`
-*   **Method:** `GET`
-*   **Description:** Retrieves a list of all products.
-*   **Request Body:** None
-*   **Response:**
-    *   **200 OK:** `products` array with product details
-    *   **500 ERROR:** Error message indicating internal server error
+- **400 Bad Request**: Invalid request data.
+- **401 Unauthorized**: Invalid or expired token.
+- **429 Too Many Requests**: Rate limit exceeded.
 
-#### Update Product Information
-
-*   **Endpoint:** `/api/products/:id`
-*   **Method:** `PUT`
-*   **Description:** Updates product information by ID.
-*   **Request Body:**
-    *   `name`: string (product name)
-    *   `price`: number (product price)
-*   **Response:**
-    *   **200 OK:** `product` object with updated product details
-    *   **404 NOT FOUND:** Error message indicating product not found
-    *   **500 ERROR:** Error message indicating internal server error
-
-#### Delete Product
-
-*   **Endpoint:** `/api/products/:id`
-*   **Method:** `DELETE`
-*   **Description:** Deletes product by ID.
-*   **Request Body:** None
-*   **Response:**
-    *   **204 NO CONTENT:** Success message indicating product deleted
-    *   **404 NOT FOUND:** Error message indicating product not found
-    *   **500 ERROR:** Error message indicating internal server error
-
-### Product Model
-
-#### Product
-
-*   **Type:** Object
-*   **Properties:**
-    *   `id`: number (product ID)
-    *   `name`: string (product name)
-    *   `price`: number (product price)
-
-### Error Responses
-
-#### Unauthorized
-
-*   **Code:** 401
-*   **Description:** Unauthorized access
-*   **Response:**
-    *   `error`: string (error message)
-
-#### Forbidden
-
-*   **Code:** 403
-*   **Description:** Forbidden access
-*   **Response:**
-    *   `error`: string (error message)
-
-#### Internal Server Error
-
-*   **Code:** 500
-*   **Description:** Internal server error
-*   **Response:**
-    *   `error`: string (error message)
+## Changelog
+### PR #1
+* Updated the title of the Universal Product Store to "Universal Product App" in the app component.
+* Added a new endpoint for retrieving a list of all products.
