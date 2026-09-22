@@ -1,19 +1,14 @@
 # Changelog
 
 ## [Unreleased]
-
 ### Added
-
 ### Changed
-
 ### Fixed
-
 ### Removed
 
-### Updated
+## [1.0.0]
+### Added
+#### API
+- _updated by PR #1_  [Universal Product App](_updated by PR #1_)
 
-### PR #1**
-
-_Updated by PR #1_
-
-*   [Updated endpoint] _updated by PR #1_
+---
