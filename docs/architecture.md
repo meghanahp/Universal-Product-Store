@@ -1,42 +1,49 @@
-# architecture — architecture
+# Universal Product Store — architecture
+
 Standing architecture document · last auto-updated by PR #1
 
 ## 1. Introduction & goals
- 
+No content available.
 
 ## 2. System context
 | system | relationship |
 |--------|--------------|
+| (team to fill) |  |
 
 ## 3. Building blocks
 ```mermaid
 graph LR
-    ProductDataService[Product Data Service] -->|calls| ProductService[Product Service]
-    ProductService -->|calls| ProductRepository[Product Repository]
-    ProductRepository -->|calls| Database[Database]
-    Database -->|returns| ProductRepository
-    ProductRepository -->|returns| ProductService
-    ProductService -->|returns| ProductDataService
-    ProductDataService -->|returns| ProductRepository
-    ProductRepository -->|returns| ProductService
-    ProductService -->|returns| ProductDataService
+    AuthService[AuthService] -->|request handling| ProductStore(ProductStore)
+    ProductStore[ProductStore] -->|product access| ProductRepository(ProductRepository)
+    ProductRepository[ProductRepository] -->|data storage| Database(Database)
 ```
-| component | responsibility |
+| component | responsibility (real names from the diff; note "added PR #1" only for new ones) |
 | --- | --- |
-| ProductDataService | handles data retrieval and caching for product service |
-| ProductService | provides data access to product repository |
-| ProductRepository | abstracts database interactions for product service |
-| Database | stores product data |
+| AuthService | request handling |
+| ProductStore | product access |
+| ProductRepository | data storage |
 
 ## 4. Runtime view
-The request for product information is now handled by ProductDataService, which calls ProductService to retrieve product data from ProductRepository. The response from ProductRepository is then passed to ProductDataService.
+The Universal Product Store now uses a new request handling mechanism, replacing the previous component. This change allows for improved error handling and better integration with the product service.
+
+```mermaid sequenceDiagram
+    participant AuthService as API Gateway
+    participant ProductStore as Product Service
+    participant ProductService as Product Repository
+    note right of AuthService: request handling
+    note left of ProductService: product data access
+    ProductStore->>ProductService: product access request
+    ProductService->>ProductRepository: product data access request
+    ProductRepository->>Database: product data storage
+    note right of ProductRepository: data storage
+```
 
 ## 5. Key decisions
 | decision | rationale | source |
 | --- | --- | --- |
-| Using ProductDataService for data retrieval and caching | Improves performance and reduces latency | PR #1 |
+| (team to fill) |  |  |
 
 ## 6. Risks & technical debt
 | risk | status |
 | --- | --- |
-| | |
+| (team to fill) |  |
