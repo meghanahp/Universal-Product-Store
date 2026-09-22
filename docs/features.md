@@ -1,26 +1,14 @@
 ---
-title: _updated by PR #1_
+title: Feature Documentation
+id: features
+kind: feature
+target_path: docs/features.md
+merge_mode: merge
+current_pr_number: #1
+
 ---
 
-### [Feature ID: 1](#feature-id-1)
-
-**Changes:** 
-- Title of Universal Product Store changed to Universal Product App
-
 ### Changelog
-
-#### Version 1.0.0
-- Updated `title` property in `AppComponent` to reflect the change in app name.
-
-### API Endpoints
-
-- **GET /app**: Returns the updated `title` property as a response.
-
-### User Story
-As a user, I want to see the updated app name in the app's title.
-
-### Related Endpoints
-
-- _updated by PR #1_
-- [GET /app](#api-endpoints/get-app)
-- [GET /app Title](#api-endpoints/get-app-title)
+#### API Changes
+- **`/app.component.ts`**: Renamed `title` property from `'Universal Product Store'` to `'Universal Product App'`.
+  Added to endpoint: _updated by PR #1_
