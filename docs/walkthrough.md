@@ -1,60 +1,38 @@
-**Walkthrough**
-===============
-
-**Step 1: Create a new file**
-
-Create a new file `walkthrough.md` in the `docs` directory.
-```markdown
 ---
-id: walkthrough
 title: Walkthrough
-kind: walkthrough
-target_path: docs/walkthrough.md
-merge_mode: merge
-current_pr_number: #1
 ---
-```
-**Step 2: Add a Changelog entry for PR #1**
 
-Add the following Changelog entry to the top of the `walkthrough.md` file:
-```markdown
-## Changelog
+Walkthrough
+================
 
-* Updated `app.component.ts`: `title` property changed from `'Universal Product Store'` to `'Universal Product App'`
-```
-**Step 3: Merge with Existing file**
+### Step 1: Apply Git Diff
 
-Merge the changes from `pull-1.diff` into the `walkthrough.md` file.
+Apply the Git diff from `pull-1.diff` to the `src/app/app.component.ts` file.
 
-### Updated sections (auto)
+### Step 2: Update Code
 
-### Runtime view
-No changes
+Update the code in `src/app/app.component.ts` to match the changes shown in the diff.
 
-### Building blocks
-No changes
+### Step 3: Update Changelog
 
-### Key decisions
-No changes
+### PR #1
+### Updated by PR #1
 
-### Manual sections (Existing)
-No changes
+Changelog
+-----------
 
-### Updated sections (merge)
-* **Updated endpoint**: `app.component.ts` ( marked with `_updated by PR #1_` )
-```markdown
----
-id: walkthrough
-title: Walkthrough
-kind: walkthrough
-target_path: docs/walkthrough.md
-merge_mode: merge
-current_pr_number: #1
----
-## Changelog
+### PR #1
 
-* Updated `app.component.ts`: `title` property changed from `'Universal Product Store'` to `'Universal Product App'`
+### Step 4: Review Changes
 
-### Updated endpoint
-* `app.component.ts` (_updated by PR #1_)
-```
+Review the changes made to the code and ensure they are correct.
+
+### Step 5: Commit Changes
+
+Commit the changes with a meaningful commit message.
+
+### Step 6: Push Changes
+
+Push the changes to the remote repository.
+
+Note: This walkthrough assumes you have already initialized a Git repository and have pulled the latest changes. If you have not, please see the [Git Documentation](https://git-scm.com/docs) for more information.
