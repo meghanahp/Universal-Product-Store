@@ -1,8 +1,13 @@
 # Changelog
+
 ## [Unreleased]
-### PR #1
 
-* Added auto section for architecture update in `app.component.ts`
-### PR #1
+### Added
+### Changed
+### Fixed
+### Removed
 
-* Updated manual section for `app.component.ts`
+### PR #1
+### _updated by PR #1_
+
+---
