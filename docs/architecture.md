@@ -1,41 +1,55 @@
 # Universal Product Store — architecture
-Standing architecture document · last auto-updated by PR #1
 
 ## 1. Introduction & goals
  
+
 ## 2. System context
+
 | system | relationship |
 |--------|--------------|
-| ProductService | dependency |
-| ProductStore | dependency |
+| existing | existing |
+| new     | new |
 
 ## 3. Building blocks
 ```mermaid
-flowchart TB
-COMPONENT[ProductService]
-COMPONENT[ProductStore]
-COMPONENT[AppComponent]
+flowchart LR
+    Service A -->|service| ProductStore
+    ProductStore -->|product| ProductService
+    ProductStore -->|api| ProductApiClient
+    ProductApiClient -->|http| ProductApiEndpoint
+```
 
-ProductService->>ProductStore: fetch products
-ProductStore->>AppComponent: products
+| component | responsibility |
+|------------|----------------|
+| ProductStore | responsible for product service integration |
+| ProductService | provides product data |
+| ProductApiClient | handles product API requests |
+| ProductApiEndpoint | exposes product API endpoints |
+
+## 4. Runtime view
+
+The request for the product is handled by the `ProductApiClient`, which makes a request to the `ProductApiEndpoint`. The `ProductStore` is responsible for integrating with the `ProductService` to retrieve product data.
+
+```mermaid
+sequenceDiagram
+    participant ProductStore as "Product Store"
+    participant ProductService as "Product Service"
+    participant ProductApiClient as "Product Client API"
+    participant ProductApiEndpoint as "Product API Endpoint"
+    
+    ProductStore->>ProductService: request product data
+    ProductService->>ProductApiClient: product data
+    ProductApiClient->>ProductApiEndpoint: request to product API endpoint
+    ProductApiEndpoint->>ProductApiClient: product API response
+    ProductApiClient->>ProductStore: response to product store
+    ProductStore->>ProductService: handle product data
 ```
 
 
-| component | responsibility |
-|------------|-----------------|
-| ProductService | fetch products    |
-| ProductStore | products         |
-| AppComponent | display products |
-
-## 4. Runtime view
-The request for product data is now handled by ProductService, which fetches products and passes them to ProductStore. ProductStore then passes the products to AppComponent, which displays them.
-
 ## 5. Key decisions
+
 | decision | rationale | source |
 |----------|-----------|--------|
-| Fetch products from ProductService | Faster and more efficient | PR #1 |
+| new API endpoint | added to handle product API requests | PR #1 |
 
 ## 6. Risks & technical debt
-| risk | status |
-|-------|--------|
-|  |  |
