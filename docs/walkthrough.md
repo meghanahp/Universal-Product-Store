@@ -1,38 +1,76 @@
----
-title: Walkthrough
----
+# Universal Product Store — walkthrough
 
-Walkthrough
-================
+### Introduction
+This walkthrough guides you through the process of setting up the Universal Product Store.
 
-### Step 1: Apply Git Diff
+### Step 1: Update Product Service
 
-Apply the Git diff from `pull-1.diff` to the `src/app/app.component.ts` file.
+Update the `ProductService` import in the `AppComponent` to include the new product service.
 
-### Step 2: Update Code
+```diff
+--- a/src/app/app.component.ts
++++ b/src/app/app.component.ts
+@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
+   styleUrls: ['./app.component.css']
+ })
+ export class AppComponent {
+-  title = 'Universal Product Store';
++  title = _updated by PR #1_ 'Universal Product App';
+ }
+```
 
-Update the code in `src/app/app.component.ts` to match the changes shown in the diff.
+### Step 2: Update Component CSS
 
-### Step 3: Update Changelog
+Update the component CSS to include the new styles.
 
-### PR #1
-### Updated by PR #1
+```diff
+--- a/src/app/app.component.css
++++ b/src/app/app.component.css
+@@ -0,0 +1,4 @@
+/* No changes */
+```
 
-Changelog
------------
+### Step 3: Update Product Service
 
-### PR #1
+Update the `ProductService` to include the new product data.
 
-### Step 4: Review Changes
+```diff
+--- a/src/app/service/product.service.ts
++++ b/src/app/service/product.service.ts
+@@ -8,5 +8,5 @@ import { Injectable } from '@angular/core';
+   styles: ['./product.service.css']
+ })
+ export class ProductService {
+-  private products = [
+-    { id: 1, name: 'Product 1' },
+-    { id: 2, name: 'Product 2' }
++  private products = [
++    { id: 1, name: 'Product 1' },
++    { id: 2, name: 'Product 2' },
++    { id: 3, name: 'Product 3' }
+ }
 
-Review the changes made to the code and ensure they are correct.
+// ...
+```
+
+### Step 4: Update Product Service CSS
+
+Update the `product.service.css` to include the new styles.
+
+```diff
+--- a/src/app/service/product.service.css
++++ b/src/app/service/product.service.css
+@@ -0,0 +1,4 @@
+/* No changes */
+```
 
 ### Step 5: Commit Changes
 
-Commit the changes with a meaningful commit message.
+Commit the changes with a meaningful commit message, such as "Update Universal Product Store to include new product service".
 
-### Step 6: Push Changes
-
-Push the changes to the remote repository.
-
-Note: This walkthrough assumes you have already initialized a Git repository and have pulled the latest changes. If you have not, please see the [Git Documentation](https://git-scm.com/docs) for more information.
+### Changelog
+### PR #1
+* Updated `AppComponent` to include new product service
+* Updated `AppComponent` CSS to include new styles
+* Updated `ProductService` to include new product data
+* Updated `ProductService` CSS to include new styles
