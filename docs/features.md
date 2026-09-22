@@ -1,43 +1,30 @@
 ---
-# Universal Product Store — Architecture
 
-### High-Level Overview
+Universal Product Store — Feature documentation
 
-### Block-Builder Table
+### Feature
 
-| Responsibility | Description |
+| Title | Description |
 | --- | --- |
-| Added `productDataService` | Created a new data service for product data. |
-| Updated `AppComponent` | Updated the title of the app component to 'Universal Product App'. |
+| Product Data Retrieval | The feature enables the retrieval of product data from the database. |
+
+### Architecture
+
+# Universal Product Store — architecture
+
+| Block | Responsibility |
+| --- | --- |
+| AppComponent | Provides the title of the Universal Product App. |
+| ProductService | Retrieves product data from the database. |
 
 ---
-
-### Universal Product Store — API Reference
-### _Updated by PR #1_
-
-#### Endpoints
-### PR #1
-
-*   `GET /products`: Retrieves a list of products.
-*   `GET /products/:id`: Retrieves a product by ID.
-*   `POST /products`: Creates a new product.
 
 ### Changelog
+
 ### PR #1
 
-### Universal Product Store — architecture
+### Updated by PR #1
 
-### Block-Builder Table
+### pull-1.diff
 
-| Responsibility | Description |
-| --- | --- |
-| Added `productDataService` | Created a new data service for product data. |
-| Updated `AppComponent` | Updated the title of the app component to 'Universal Product App'. |
-
----
-
-### Universal Product Store — Features/Walkthrough/Readme
-
-#### Changes to `AppComponent`
-
-The title of the app component has been updated to 'Universal Product App'.
+### ProductDataService | Updated the product data retrieval logic.
