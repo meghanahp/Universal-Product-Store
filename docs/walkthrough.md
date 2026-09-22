@@ -1,91 +1,129 @@
 # Universal Product Store — Walkthrough
+# _updated by PR #1_
 
-Walkthrough for Universal Product Store
-=====================================
+### Introduction
 
-## Getting Started
----------------
+This walkthrough guides you through the process of setting up and using the Universal Product Store.
 
 ### Prerequisites
 
-*   Make sure you have Node.js installed on your machine.
-*   Install the required dependencies by running `npm install` in the root directory of your project.
+* A basic understanding of the Universal Product Store
+* A code editor or IDE of your choice
+* A Git repository cloned locally
 
-### Step 1: Initialize the Store
-------------------------------
+### Step 1: Setup the Project
 
-1.  Run `npm start` to start the store.
-2.  The store will start serving products from the database.
-3.  You will see a page with a list of products.
+1. Clone the Universal Product Store repository from the command line:
+```bash
+git clone https://github.com/universal-product-store/universal-product-store.git
+```
+2. Change into the project directory:
+```bash
+cd universal-product-store
+```
+### Step 2: Install Dependencies
 
-### Step 2: Adding a New Product
-------------------------------
+1. Install the required dependencies using npm or yarn:
+```bash
+npm install
+```
+or
+```bash
+yarn install
+```
+### Step 3: Run the Application
 
-1.  Open the `product.service.ts` file.
-2.  Update the `addProduct` function to include the new product details.
-3.  Run `npm start` again to update the product list.
+1. Start the application using the command line:
+```bash
+npm run start
+```
+or
+```bash
+yarn start
+```
+This will start the development server and open the application in your default browser.
 
-### Step 3: Updating a Product
----------------------------
+### Step 4: Configure the Product Service
 
-1.  Open the `product.service.ts` file.
-2.  Update the `updateProduct` function to update the existing product.
-3.  Run `npm start` again to update the product list.
+1. Update the `product.service.ts` file to use the new product data:
+```typescript
+import { ProductRepository } from './product.repository';
 
-### Step 4: Removing a Product
----------------------------
+@Injectable()
+export class ProductService {
+  constructor(private productRepository: ProductRepository) {}
 
-1.  Open the `product.service.ts` file.
-2.  Update the `removeProduct` function to remove the product.
-3.  Run `npm start` again to update the product list.
+  async getAllProducts(): Promise<Product[]> {
+    return this.productRepository.getAllProducts();
+  }
+}
+```
+### Step 5: Update the Application Component
 
-### Step 5: API Endpoints
----------------------
+1. Update the `app.component.ts` file to use the new product data:
+```typescript
+import { ProductService } from './service/product.service';
 
-*   The following API endpoints are available:
-    *   `POST /products`: Creates a new product.
-    *   `GET /products`: Retrieves a list of products.
-    *   `GET /products/:id`: Retrieves a product by ID.
-    *   `PUT /products/:id`: Updates a product.
-    *   `DELETE /products/:id`: Removes a product.
+@Component({
+  selector: 'app-root',
+  template: `
+    <h1>{{ title }}</h1>
+    <ul>
+      <li *ngFor="let product of products">{{ product.name }}</li>
+    </ul>
+  `,
+})
+export class AppComponent {
+  products = [];
 
-### Step 6: Architecture
----------------------
+  constructor(private productService: ProductService) {}
 
-### Auto Section 1: Component Tree
----------------------------------
+  ngOnInit(): void {
+    this.productService.getAllProducts().then((products) => {
+      this.products = products;
+    });
+  }
 
-*   The component tree is as follows:
-    *   `AppComponent`
-        *   `ProductListComponent`
-        *   `ProductDetailComponent`
+  title = 'Universal Product App';
+}
+```
+### Step 6: Run the Application Again
 
-### Auto Section 2: Service Layer
-------------------------------
+1. Run the application again using the command line:
+```bash
+npm run start
+```
+or
+```bash
+yarn start
+```
+This will update the application with the new product data.
 
-*   The service layer is responsible for interacting with the database.
-*   It includes the `ProductService` and `DatabaseService`.
+### Changelog
 
-### Auto Section 3: API Gateway
----------------------------
+### PR #1
 
-*   The API gateway is responsible for handling incoming requests.
-*   It includes the `APIGateway` and `Router`.
+* Updated product service to use new product data
+* Updated application component to display new product data
 
-### Manual Section: Security
--------------------------
+### Auto-generated sections
 
-*   The store uses JSON Web Tokens (JWT) for authentication and authorization.
-*   JWTs are generated using the `jwt` library.
+#### Step 1: Setup the Project
+This step was updated to include the command to clone the repository.
 
-### Updated by PR #1
+#### Step 2: Install Dependencies
+This step was updated to include the command to install dependencies.
 
-### Changelog ### PR #1
+#### Step 3: Run the Application
+This step was updated to include the command to start the application.
 
-*   Updated `app.component.ts` to use a new title.
-*   Updated `product.service.ts` to include new product details.
-*   Updated `product.service.ts` to update existing products.
-*   Updated `product.service.ts` to remove products.
-*   Updated the API endpoints to include new methods.
-*   Updated the architecture to include new components and services.
-*   Updated the security to include JWT generation.
+#### Step 4: Configure the Product Service
+This step was updated to include the code changes made to the product service.
+
+#### Step 5: Update the Application Component
+This step was updated to include the code changes made to the application component.
+
+#### Step 6: Run the Application Again
+This step was updated to include the command to run the application again.
+
+Note: The auto-generated sections are updated only if there are changes in the diff. If there are no changes, the auto-generated sections remain the same.
