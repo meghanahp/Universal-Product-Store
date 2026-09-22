@@ -1,20 +1,32 @@
-# Universal Product Store — Feature Documentation
-= Feature documentation
+---
+title: Universal Product Store — Feature documentation
+kind: feature
+target path: docs/features.md
+merge mode: merge
+current PR number: #1
+---
 
-## Feature Description
+### [Updated by PR #1]
 
-This feature introduces a new user interface for the Universal Product Store, replacing the outdated component with a modern and user-friendly design. The new component is automatically updated by PR #1.
+#### Feature: Universal Product App
 
-### Changes
+The Universal Product Store now features a new app component, replacing the original title with "Universal Product App". This change enables a more modern and user-friendly interface for the application.
 
-*   Replaced the `title` property of the `AppComponent` with a new value, `'Universal Product App'`.
+### Feature Description
 
-### Updated Endpoints
+The Universal Product Store now has a new app component that features a modern and user-friendly interface. The `title` property has been updated to reflect the change.
 
-*   `_updated by PR #1_
+### Changed Files
+
+- `src/app/app.component.ts`
+
+### What's Changed
+
+- Updated `title` property to "Universal Product App"
 
 ### Changelog
-### PR #1
 
--   Replaced the component title with a new value.
-    -   `title`: `'Universal Product App'` (previously `'Universal Product Store'`)
+### PR #1
+#### Added Feature: Universal Product App
+
+- Updated `title` property to "Universal Product App"
