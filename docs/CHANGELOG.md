@@ -1,5 +1,19 @@
 # Changelog
 
 ## [Unreleased]
+
 ### Added
-- Updated the title of the AppComponent from 'Universal Product Store' to 'Universal Product App' in `src/app/app.component.ts`.
+
+### Changed
+
+### Fixed
+
+### Removed
+
+### Updated
+
+### PR #1**
+
+_Updated by PR #1_
+
+*   [Updated endpoint] _updated by PR #1_
