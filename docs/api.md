@@ -1,45 +1,58 @@
-# API Documentation
+# API documentation
 > continuum · standard documentation format — api reference
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-Base URL: https://example.com/api · Format: JSON · Auth: Bearer
+Base URL: 
+> Format: JSON 
+> Auth: 
 
 ## Overview
-The Universal Product App API provides a RESTful interface for managing products and product-related data.
+Short description of the API surface.
 
 ## Authentication
- callers must provide a valid Bearer token in the Authorization header. Token lifetime is not explicitly stated but is expected to be short-lived.
+How callers authenticate (headers, token lifetime). Only state what the diff or existing file supports.
 
-## Product Resource
-### GET /products
+## ProductResource
+Group related endpoints under a resource heading (e.g. Product resource).
+
+For each endpoint use this shape:
+
+### METHOD `/getProducts`
 _updated by PR #1_
-Retrieve a list of all products.
+One-line description.
 
-| field | type | yes/no |
+| field | type | required |
 |-------|------|----------|
-| id    | integer | yes |
-| name  | string | yes |
-| price | number | no |
+| name  | type | yes/no   |
 
 **Response 200**
 ```json
 {
   "products": [
-    {"id": 1, "name": "Product 1", "price": 10.99},
-    {"id": 2, "name": "Product 2", "price": 5.99}
+    {
+      "id": 1,
+      "name": "Product 1"
+    },
+    {
+      "id": 2,
+      "name": "Product 2"
+    }
   ]
 }
 ```
 
+**Response 404**
+```json
+{
+  "error": "Product not found"
+}
+```
+
 ## Errors
-Shared error codes:
+Shared error codes (400, 401, 429, …) with short meanings.
 
-- **400 Bad Request**: Invalid request data.
-- **401 Unauthorized**: Invalid or expired token.
-- **429 Too Many Requests**: Rate limit exceeded.
-
-## Changelog
 ### PR #1
-* Updated the title of the Universal Product Store to "Universal Product App" in the app component.
-* Added a new endpoint for retrieving a list of all products.
+* Added `title` field to `AppComponent` with a new value, indicating a title change.
+* Changed the `title` property of `AppComponent` from `'Universal Product Store'` to `'Universal Product App'`.
+* Updated `ProductService` import path.
