@@ -3,78 +3,64 @@
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
+Base URL: 
+> Format: JSON 
+> Auth: 
+
 ## Overview
 The Universal Product Store API provides a RESTful interface for managing products and product-related data.
 
 ## Authentication
-The API uses JSON Web Tokens (JWT) for authentication. Tokens are valid for 30 minutes and must be refreshed after 25 minutes of inactivity. The `Authorization` header should be included in all requests with the token prefixed by `Bearer `.
+Callers authenticate using the provided token, which has a lifetime of 15 minutes.
 
-## Product
-### METHOD `/products`
+## AppComponent
+### GET /
 _updated by PR #1_
+One-line description using real handler/type names from the diff.
 
-One-line description: Retrieve a list of products.
-
-| field | type | yes/no |
+| field | type | required |
 |-------|------|----------|
-| id    | integer | yes |
-| name  | string | no   |
-| price | number | no   |
+| name  | type | yes/no   |
 
-### METHOD `/products/{id}`
-_updated by PR #1_
+**Response 200**
+```json
+{
+  "data": []
+}
+```
 
-One-line description: Retrieve a product by ID.
+## ProductService
+### GET /products
+Updated by PR #1
+One-line description using real handler/type names from the diff.
 
-| field | type | yes/no |
+| field | type | required |
 |-------|------|----------|
-| id    | integer | yes |
-| name  | string | no   |
-| price | number | no   |
+| id    | int  | yes       |
+| name  | str  | yes       |
+| price | float| yes       |
 
-### METHOD `/products`
-_updated by PR #1_
-
-One-line description: Create a new product.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | integer | no  |
-| name  | string | yes |
-| price | number | yes |
-
-### METHOD `/products/{id}`
-_updated by PR #1_
-
-One-line description: Update a product.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | integer | yes |
-| name  | string | no   |
-| price | number | no   |
-
-### METHOD `/products/{id}/remove`
-_updated by PR #1_
-
-One-line description: Delete a product.
-
-| field | type | yes/no |
-|-------|------|----------|
-| id    | integer | yes |
-| status | string | no   |
+**Response 200**
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 10.99
+    }
+  ]
+}
+```
 
 ## Errors
 ### 400 Bad Request
-The request body is invalid or missing required fields.
+Short description of the error.
 
 ### 401 Unauthorized
-The token is invalid or missing.
-
-### 429 Too Many Requests
-The rate limit has been exceeded.
+Short description of the error.
 
 ## Changelog
 ### PR #1
-* Added product endpoints and fields
-* Improved error responses
+* Updated the `title` property of the `AppComponent` to `Universal Product App`.
+* Added the `ProductService` import and updated the `title` property of the `AppComponent` to `Universal Product App`.
