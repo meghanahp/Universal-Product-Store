@@ -1,129 +1,103 @@
 # Universal Product Store — Walkthrough
-# _updated by PR #1_
 
-### Introduction
+## Introduction
+Get started with the Universal Product Store by following this walkthrough.
 
-This walkthrough guides you through the process of setting up and using the Universal Product Store.
+## Prerequisites
+Ensure you have a basic understanding of the Universal Product Store and its components.
 
-### Prerequisites
-
-* A basic understanding of the Universal Product Store
-* A code editor or IDE of your choice
-* A Git repository cloned locally
-
-### Step 1: Setup the Project
-
-1. Clone the Universal Product Store repository from the command line:
-```bash
-git clone https://github.com/universal-product-store/universal-product-store.git
-```
-2. Change into the project directory:
-```bash
-cd universal-product-store
-```
-### Step 2: Install Dependencies
-
-1. Install the required dependencies using npm or yarn:
+## Step 1: Setting up the Universal Product Store
+Run the following command to set up the Universal Product Store:
 ```bash
 npm install
 ```
-or
+Update the `AppComponent` to use the `ProductService`:
+```diff
+--- a/src/app/app.component.ts
++++ b/src/app/app.component.ts
+@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
+   styleUrls: ['./app.component.css']
+ })
+-export class AppComponent {
++export class AppComponent {
+   title = 'Updated by PR #1_';
+ }
+```
+## Step 1: _updated by PR #1_
+### Updated Endpoint
+#### Updated by PR #1
+`GET /products`
+
+#### Updated by PR #1
+`POST /products`
+
+### Step 2: Using the ProductService
+Import and use the `ProductService` in your components:
+```diff
+--- a/src/app/app.component.ts
++++ b/src/app/app.component.ts
+@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
+   styleUrls: ['./app.component.css']
+ })
+ export class AppComponent {
+   title = 'Updated by PR #1_';
+ }
+```
+## Step 2: Using the ProductService
+#### Updated by PR #1
+`getProducts()`
+
+#### Updated by PR #1
+`createProduct(productData)`
+
+## Step 3: Integrating with the Universal Product Store
+Integrate the `AppComponent` with the Universal Product Store:
+```diff
+--- a/src/app/app.component.ts
++++ b/src/app/app.component.ts
+@@ -8,5 +8,5 @@ import { ProductService } from './service/product.service';
+   styleUrls: ['./app.component.css']
+ })
+ export class AppComponent {
+   title = 'Updated by PR #1_';
+ }
+```
+## Step 3: Integrating with the Universal Product Store
+#### Updated by PR #1
+`updateProduct(productId, productData)`
+
+#### Updated by PR #1
+`deleteProduct(productId)`
+
+## Step 4: Testing the Universal Product Store
+Test the Universal Product Store by running the following command:
 ```bash
-yarn install
+npm test
 ```
-### Step 3: Run the Application
+## Step 4: Testing the Universal Product Store
+#### Updated by PR #1
+`testGetProducts()`
 
-1. Start the application using the command line:
-```bash
-npm run start
-```
-or
-```bash
-yarn start
-```
-This will start the development server and open the application in your default browser.
+#### Updated by PR #1
+`testCreateProduct()`
 
-### Step 4: Configure the Product Service
+#### Updated by PR #1
+`testUpdateProduct()`
 
-1. Update the `product.service.ts` file to use the new product data:
-```typescript
-import { ProductRepository } from './product.repository';
+#### Updated by PR #1
+`testDeleteProduct()`
 
-@Injectable()
-export class ProductService {
-  constructor(private productRepository: ProductRepository) {}
-
-  async getAllProducts(): Promise<Product[]> {
-    return this.productRepository.getAllProducts();
-  }
-}
-```
-### Step 5: Update the Application Component
-
-1. Update the `app.component.ts` file to use the new product data:
-```typescript
-import { ProductService } from './service/product.service';
-
-@Component({
-  selector: 'app-root',
-  template: `
-    <h1>{{ title }}</h1>
-    <ul>
-      <li *ngFor="let product of products">{{ product.name }}</li>
-    </ul>
-  `,
-})
-export class AppComponent {
-  products = [];
-
-  constructor(private productService: ProductService) {}
-
-  ngOnInit(): void {
-    this.productService.getAllProducts().then((products) => {
-      this.products = products;
-    });
-  }
-
-  title = 'Universal Product App';
-}
-```
-### Step 6: Run the Application Again
-
-1. Run the application again using the command line:
-```bash
-npm run start
-```
-or
-```bash
-yarn start
-```
-This will update the application with the new product data.
-
-### Changelog
-
+### Step 4: Updated Changelog
 ### PR #1
+- Updated `AppComponent` to use `ProductService`
+- Updated `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
+- Added test cases for `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
 
-* Updated product service to use new product data
-* Updated application component to display new product data
+## Step 5: Conclusion
+Congratulations! You have completed the Universal Product Store walkthrough.
 
-### Auto-generated sections
-
-#### Step 1: Setup the Project
-This step was updated to include the command to clone the repository.
-
-#### Step 2: Install Dependencies
-This step was updated to include the command to install dependencies.
-
-#### Step 3: Run the Application
-This step was updated to include the command to start the application.
-
-#### Step 4: Configure the Product Service
-This step was updated to include the code changes made to the product service.
-
-#### Step 5: Update the Application Component
-This step was updated to include the code changes made to the application component.
-
-#### Step 6: Run the Application Again
-This step was updated to include the command to run the application again.
-
-Note: The auto-generated sections are updated only if there are changes in the diff. If there are no changes, the auto-generated sections remain the same.
+### Step 5: Updated Changelog
+### PR #1
+- Updated `AppComponent` to use `ProductService`
+- Updated `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
+- Added test cases for `getProducts`, `createProduct`, `updateProduct`, and `deleteProduct` methods
