@@ -1,45 +1,43 @@
-# Universal Product Store — API reference
-### Updated endpoints
+---
+# Universal Product Store — Architecture
 
-#### Product Data Service
+### High-Level Overview
 
-* `getProductById`: _updated by PR #1_;
-* `searchProducts`: _updated by PR #1_;
-* `updateProduct`: _updated by PR #1_;
-
-### Changelog
-
-### PR #1
-### Updated files
-* `app.component.ts`
-
-#### Updated by PR #1_
-
-### Universal Product Store — architecture
+### Block-Builder Table
 
 | Responsibility | Description |
 | --- | --- |
-| `AppComponent` | Update `title` to `title = 'Universal Product App';` |
-| `ProductService` | Update `import { ProductService } from './service/product.service';` to `import { ProductService } from './service/product.service';` |
+| Added `productDataService` | Created a new data service for product data. |
+| Updated `AppComponent` | Updated the title of the app component to 'Universal Product App'. |
 
-#### Updated by PR #1_
+---
 
-### Universal Product Store — features
-#### Walkthrough
-#### Readme
+### Universal Product Store — API Reference
+### _Updated by PR #1_
+
+#### Endpoints
+### PR #1
+
+*   `GET /products`: Retrieves a list of products.
+*   `GET /products/:id`: Retrieves a product by ID.
+*   `POST /products`: Creates a new product.
+
+### Changelog
+### PR #1
 
 ### Universal Product Store — architecture
 
-| Component | Responsibility |
+### Block-Builder Table
+
+| Responsibility | Description |
 | --- | --- |
-| `AppComponent` | Update `title` to `title = 'Universal Product App';` |
-| `ProductService` | Update `import { ProductService } from './service/product.service';` to `import { ProductService } from './service/product.service';` |
+| Added `productDataService` | Created a new data service for product data. |
+| Updated `AppComponent` | Updated the title of the app component to 'Universal Product App'. |
 
-#### Updated by PR #1_
+---
 
-| Component | Responsibility |
-| --- | --- |
-| `AppComponent` | Update `title` to `title = 'Universal Product App';` |
-| `ProductService` | Update `import { ProductService } from './service/product.service';` to `import { ProductService } from './service/product.service';` |
+### Universal Product Store — Features/Walkthrough/Readme
 
-#### Updated by PR #1_
+#### Changes to `AppComponent`
+
+The title of the app component has been updated to 'Universal Product App'.
