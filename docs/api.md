@@ -1,22 +1,21 @@
+```
 # Universal Product Store — API reference
 > continuum · standard documentation format — api reference
 >
 > Standing API reference — maintained continuously. Each PR patches only the endpoints it touches.
 
-Base URL: 
-> Format: JSON 
-> Auth: 
+Base URL:  · Format: JSON · Auth: 
 
 ## Overview
 The Universal Product Store API provides a RESTful interface for managing products and product-related data.
 
 ## Authentication
-Callers authenticate using the provided token, which has a lifetime of 15 minutes.
+Callers authenticate using the `Authorization` header with a token.
 
 ## AppComponent
 ### GET /
 _updated by PR #1_
-One-line description using real handler/type names from the diff.
+Retrieve the Universal Product App component metadata.
 
 | field | type | required |
 |-------|------|----------|
@@ -25,42 +24,58 @@ One-line description using real handler/type names from the diff.
 **Response 200**
 ```json
 {
-  "data": []
+  "title": "Universal Product App",
+  "component": "AppComponent"
 }
 ```
 
 ## ProductService
 ### GET /products
-Updated by PR #1
-One-line description using real handler/type names from the diff.
+_updated by PR #1_
+Retrieve a list of products.
+
+### POST /products
+_updated by PR #1_
+Create a new product.
 
 | field | type | required |
 |-------|------|----------|
-| id    | int  | yes       |
-| name  | str  | yes       |
-| price | float| yes       |
+| name  | string | yes       |
+| price | number | yes       |
 
-**Response 200**
+**Response 201**
 ```json
 {
-  "data": [
-    {
-      "id": 1,
-      "name": "Product 1",
-      "price": 10.99
-    }
-  ]
+  "id": 1,
+  "name": "Test Product",
+  "price": 9.99
 }
 ```
 
 ## Errors
-### 400 Bad Request
-Short description of the error.
+- **400** — Bad Request
+- **401** — Unauthorized
 
-### 401 Unauthorized
-Short description of the error.
-
-## Changelog
 ### PR #1
-* Updated the `title` property of the `AppComponent` to `Universal Product App`.
-* Added the `ProductService` import and updated the `title` property of the `AppComponent` to `Universal Product App`.
+- Added `title` property to the `AppComponent` class.
+- Updated `title` property to `Universal Product App` in the `AppComponent` class.
+```json
+// src/app/app.component.ts
+export class AppComponent {
+  title = 'Universal Product App';
+}
+```
+```json
+// docs/api.md
+### METHOD /products
+_updated by PR #1_
+Retrieve a list of products.
+One-line description using real handler/type names from the diff.
+
+| field | type | required |
+|-------|------|----------|
+| name  | string | yes       |
+| price | number | yes       |
+
+...
+```
